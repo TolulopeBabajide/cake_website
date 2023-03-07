@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+header .nav1 {
+  background-color: rgb(233, 219, 142);
+  width: 100%;
+  height: 50px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .nav2 {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 5px 5px 5px lightgrey;
+  background-color: rgb(123, 110, 41);
+  box-sizing: border-box;
+}
+@media (max-width: 600px) {
+  header .nav2 {
+    justify-content: space-around;
+    display: flex;
+  }
+}
+header .nav2 .logo img {
+  height: 60px;
+  width: 60px;
+  padding: 10px;
+}
+header .nav2 .menu {
+  width: 50vw;
+}
+header .nav2 .menu ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  padding: 10px;
+}
+header .nav2 .menu ul li {
+  padding-left: 20px;
+}
+header .nav2 .menu ul li:hover {
+  color: rgb(233, 219, 142);
+}
+header .nav2 .menu ul li a {
+  text-decoration: none;
+  color: black;
+}
+@media (max-width: 600px) {
+  header .nav2 .menu ul li a {
+    display: none;
+  }
+}
+header .nav2 .menu ul li a:hover {
+  color: rgb(233, 219, 142);
+}
+header .nav2 .hamburger {
+  display: none;
+}
+@media (max-width: 600px) {
+  header .nav2 .hamburger {
+    display: flex;
+  }
+}
+
+main {
+  width: 100vw;
+  height: calc(100vh - 150px);
+  background-image: url(pexels-balazs-simon-7845536.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+@media (max-width: 600px) {
+  main {
+    padding: 10px;
+    box-sizing: border-box;
+    color: rgb(233, 219, 142);
+  }
+}
+
+.about {
+  width: 100vw;
+  height: auto;
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.services {
+  width: 100vw;
+  height: auto;
+  background-color: whitesmoke;
+  align-content: center;
+  text-align: center;
+  color: rgb(123, 110, 41);
+}
+.services .flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+@media (max-width: 600px) {
+  .services .flex {
+    display: grid;
+  }
+}
+.services .flex .card {
+  width: 280px;
+  height: auto;
+  box-shadow: 5px 5px 5px lightgrey;
+  margin: 10px;
+}
+.services .flex .card img {
+  width: 100%;
+  height: 250px;
+}/*# sourceMappingURL=style.css.map */

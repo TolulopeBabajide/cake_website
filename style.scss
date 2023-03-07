@@ -1,0 +1,189 @@
+
+$background-color:rgb(233, 219, 142);
+$secondary-color:rgb(123, 110, 41);
+
+@mixin flexCenter(){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+@mixin flexAround(){
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+header{
+
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // bottom: 0;
+    // right: 0;
+
+
+    .nav1{
+        background-color: $background-color;
+        width: 100%;
+        height: 50px;
+        color: white;
+        @include flexCenter();
+        
+        
+        
+
+    }
+
+    .nav2{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 5px 5px 5px lightgrey;
+        background-color: $secondary-color;
+        // border: 2px solid green;
+        box-sizing: border-box;
+
+        @media (max-width:600px) {
+            justify-content: space-around;
+            display: flex;
+            
+        }
+        
+        .logo{
+
+            // border: 2px solid blue;
+            img{
+                height: 60px;
+                width: 60px;
+                // justify-content: start;
+                padding: 10px;
+            }
+        }
+
+       .menu{
+
+        // border: 2px solid red;
+        width: 50vw;
+
+        ul{
+            display: flex;
+            list-style: none;
+            // border: 2px solid red;
+            justify-content: space-between;
+            padding: 10px;
+            
+            li{
+                padding-left: 20px;
+                // justify-content: space-between;
+                
+                &:hover{
+                    color: $background-color;
+                }
+
+                
+
+                a{
+                    text-decoration: none;
+                    color: black;
+
+                    @media (max-width: 600px) {
+                        display: none;
+                        
+                    }
+
+                    &:hover{
+                        color: $background-color;
+                    }
+                    
+                }
+            }
+        }
+       }
+
+        .hamburger{
+            
+            display: none;
+
+            @media (max-width:600px) {
+                display: flex;
+                
+            }
+        }
+
+
+
+    }
+}
+
+main{
+    width: 100vw;
+    height: calc(100vh - 150px);
+    // background-image:url(PHOTO-2023-03-07-09-27-42.jpg) ;
+    background-image:url(pexels-balazs-simon-7845536.jpg) ;
+    background-size: cover;
+    @include flexCenter();
+    flex-direction: column;
+
+    @media (max-width:600px) {
+        padding: 10px;
+        box-sizing: border-box;
+        color: $background-color;
+        
+    }
+    
+}
+
+
+.about{
+
+    width: 100vw;
+    height: auto;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+
+.services{
+    width: 100vw;
+    height: auto;
+    background-color: whitesmoke;
+    align-content: center;
+    text-align: center;
+    color: $secondary-color;
+
+    .flex{
+        @include flexAround();
+        padding: 10px;
+        @media (max-width:600px) {
+            display: grid;
+
+            
+        }
+        
+        .card{
+            width: 280px;
+            height: auto;
+            box-shadow: 5px 5px 5px lightgrey;
+            margin: 10px;
+
+            img{
+                width: 100%;
+                height: 250px;
+            }
+        }
+
+
+    }
+}
